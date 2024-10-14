@@ -39,9 +39,10 @@ namespace a_mimir
         {
             MessageBox.Show("Puedes ingresar un valor numérico separado por ':' para delimitar horas, minutos y segundos.\n\n" +
                 "El valor del tiempo ingresado dependerá de cuántos símbolos agregues.\n" +
-                "Ejemplo:\n-\"1:40:12\" iniciará el temporizador con un tiempo de 1 hora, 40 minutos y 12 segundos.\n" +
-                "-\"23:40\" iniciará el temporizador con un tiempo de 23 minutos y 40 segundos.\n" +
-                "-\"4433\" inicia el temporizador con un tiempo de 4433 segundos.\n" +
+                "Ejemplo:\n" +
+                "-\"4\" inicia el temporizador con un tiempo de 4 horas.\n" +
+                "-\"23:40\" iniciará el temporizador con un tiempo de 23 horas y 40 minutos.\n" +
+                "-\"1:63:253\" iniciará el temporizador con un tiempo de 2 hora, 7 minutos y 13 segundos.\n" +                
                 "Como muestra el último ejemplo, el temporizador ajusta automáticamente el tiempo ingresado, por lo que no hay que preocuparse por ingresar valores de los minutos o segundos mayores a 59.", "Ayuda");
         }
 

@@ -16,6 +16,7 @@ namespace a_mimir
         bool flag = false;
         private Timer countdownTimer;
         private int totalTimeInSeconds;
+        
         private void InitializeTimer()
         {
             // Initialize the Timer
@@ -32,6 +33,10 @@ namespace a_mimir
 
                 // Update the label with the formatted time
                 timer.Text = TimeSpan.FromSeconds(totalTimeInSeconds).ToString(@"hh\:mm\:ss");
+                if (timer.Text == "00:01:00" && flag)
+                {
+                    //ExecutePowerShellCommand("shutdown /s /f /p");
+                }
                 if (timer.Text == "00:00:00" && flag)
                 {
                     countdownTimer.Stop();
@@ -57,7 +62,7 @@ namespace a_mimir
                 case 1:
                     try
                     {
-                        return int.Parse(time);
+                        return int.Parse(time) * 3600;
                     }
                     catch (Exception)
                     {
@@ -67,7 +72,7 @@ namespace a_mimir
                 case 2:
                     try
                     {
-                        return int.Parse(parts[0]) * 60 + int.Parse(parts[1]);
+                        return int.Parse(parts[0]) * 3600 + int.Parse(parts[1]) * 60;
                     }
                     catch (Exception)
                     {
@@ -139,13 +144,21 @@ namespace a_mimir
                 MessageBox.Show($"An error occurred: {ex.Message}");
             }
         }
-           public Form1()
+        public Form1()
         {
             InitializeComponent();
+            InitializeTimer();
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
+            string url = "https://www.youtube.com/watch?v=dg4dmNvxdu0";
+            ProcessStartInfo psi = new ProcessStartInfo
+            {
+                FileName = url,
+                UseShellExecute = true
+            };
+            Process.Start(psi);
 
         }
 
@@ -153,7 +166,6 @@ namespace a_mimir
         {
             totalTimeInSeconds = 3600;
             ExecutePowerShellCommand("shutdown /s /t " + totalTimeInSeconds);
-            InitializeTimer();
             startTimer();
             
         }
@@ -162,7 +174,6 @@ namespace a_mimir
         {
             totalTimeInSeconds = 7200;
             ExecutePowerShellCommand("shutdown /s /t " + totalTimeInSeconds);
-            InitializeTimer();
             startTimer();
         }
 
@@ -170,7 +181,6 @@ namespace a_mimir
         {
             totalTimeInSeconds = 10800;
             ExecutePowerShellCommand("shutdown /s /t " + totalTimeInSeconds);
-            InitializeTimer();
             startTimer();
         }
 
@@ -181,7 +191,6 @@ namespace a_mimir
             {
                 totalTimeInSeconds = ConvertToSeconds(form2.InputText);
                 ExecutePowerShellCommand("shutdown /s /t " + totalTimeInSeconds);
-                InitializeTimer();
                 startTimer();
             }
             
@@ -193,8 +202,15 @@ namespace a_mimir
         private void buttonCancel_Click(object sender, EventArgs e)
         {
             ExecutePowerShellCommand("shutdown /a");
+            totalTimeInSeconds = 0;
+            InitializeTimer();
             timer.Text = "00:00:00";
             MessageBox.Show("Apagado abortado");
+        }
+
+        private void label1_MouseMove(object sender, MouseEventArgs e)
+        {
+            toolTip1.SetToolTip(label1, "ᓚᘏᗢ");
         }
     }
 }
