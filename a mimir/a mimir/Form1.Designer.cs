@@ -40,6 +40,7 @@
             this.button3hour = new System.Windows.Forms.Button();
             this.button2hour = new System.Windows.Forms.Button();
             this.button1hour = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -64,7 +65,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(581, 445);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(581, 303);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // tableLayoutPanel2
@@ -82,8 +83,8 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(573, 261);
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(573, 175);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
             // label1
@@ -93,7 +94,7 @@
             this.label1.Location = new System.Drawing.Point(4, 0);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(287, 222);
+            this.label1.Size = new System.Drawing.Size(287, 142);
             this.label1.TabIndex = 0;
             this.label1.Text = resources.GetString("label1.Text");
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -101,7 +102,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(4, 222);
+            this.label2.Location = new System.Drawing.Point(4, 142);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(197, 17);
@@ -113,34 +114,38 @@
             this.tableLayoutPanel3.ColumnCount = 1;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.Controls.Add(this.timer, 0, 1);
+            this.tableLayoutPanel3.Controls.Add(this.label3, 0, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(306, 3);
             this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 2;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(263, 216);
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 84F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(263, 136);
             this.tableLayoutPanel3.TabIndex = 3;
             // 
             // timer
             // 
+            this.timer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.timer.AutoSize = true;
-            this.timer.Location = new System.Drawing.Point(4, 161);
+            this.timer.Font = new System.Drawing.Font("MS Gothic", 20F);
+            this.timer.Location = new System.Drawing.Point(56, 52);
             this.timer.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.timer.Name = "timer";
-            this.timer.Size = new System.Drawing.Size(17, 17);
+            this.timer.Size = new System.Drawing.Size(151, 84);
             this.timer.TabIndex = 2;
-            this.timer.Text = "a";
+            this.timer.Text = "00:00:00";
+            this.timer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.timer.Click += new System.EventHandler(this.timer_Click);
             // 
             // buttonCancel
             // 
             this.buttonCancel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonCancel.Location = new System.Drawing.Point(306, 225);
+            this.buttonCancel.Location = new System.Drawing.Point(306, 145);
             this.buttonCancel.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(263, 33);
+            this.buttonCancel.Size = new System.Drawing.Size(263, 27);
             this.buttonCancel.TabIndex = 4;
             this.buttonCancel.Text = "Cancelar";
             this.buttonCancel.UseVisualStyleBackColor = true;
@@ -149,10 +154,10 @@
             // buttonCustomTime
             // 
             this.buttonCustomTime.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonCustomTime.Location = new System.Drawing.Point(4, 402);
+            this.buttonCustomTime.Location = new System.Drawing.Point(4, 274);
             this.buttonCustomTime.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.buttonCustomTime.Name = "buttonCustomTime";
-            this.buttonCustomTime.Size = new System.Drawing.Size(573, 40);
+            this.buttonCustomTime.Size = new System.Drawing.Size(573, 26);
             this.buttonCustomTime.TabIndex = 4;
             this.buttonCustomTime.Text = "Tiempo personalizado";
             this.buttonCustomTime.UseVisualStyleBackColor = true;
@@ -161,10 +166,10 @@
             // button3hour
             // 
             this.button3hour.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button3hour.Location = new System.Drawing.Point(4, 358);
+            this.button3hour.Location = new System.Drawing.Point(4, 244);
             this.button3hour.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button3hour.Name = "button3hour";
-            this.button3hour.Size = new System.Drawing.Size(573, 38);
+            this.button3hour.Size = new System.Drawing.Size(573, 24);
             this.button3hour.TabIndex = 3;
             this.button3hour.Text = "Apagar en tres horas";
             this.button3hour.UseVisualStyleBackColor = true;
@@ -173,10 +178,10 @@
             // button2hour
             // 
             this.button2hour.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button2hour.Location = new System.Drawing.Point(4, 314);
+            this.button2hour.Location = new System.Drawing.Point(4, 214);
             this.button2hour.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button2hour.Name = "button2hour";
-            this.button2hour.Size = new System.Drawing.Size(573, 38);
+            this.button2hour.Size = new System.Drawing.Size(573, 24);
             this.button2hour.TabIndex = 2;
             this.button2hour.Text = "Apagar en dos horas";
             this.button2hour.UseVisualStyleBackColor = true;
@@ -185,21 +190,30 @@
             // button1hour
             // 
             this.button1hour.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button1hour.Location = new System.Drawing.Point(4, 270);
+            this.button1hour.Location = new System.Drawing.Point(4, 184);
             this.button1hour.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button1hour.Name = "button1hour";
-            this.button1hour.Size = new System.Drawing.Size(573, 38);
+            this.button1hour.Size = new System.Drawing.Size(573, 24);
             this.button1hour.TabIndex = 1;
             this.button1hour.Text = "Apagar en una hora";
             this.button1hour.UseVisualStyleBackColor = true;
             this.button1hour.Click += new System.EventHandler(this.button1hour_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(3, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(251, 17);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "El ordenador se apagará en:";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(581, 445);
+            this.ClientSize = new System.Drawing.Size(581, 303);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Font = new System.Drawing.Font("MS Gothic", 10F);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -229,6 +243,7 @@
         private System.Windows.Forms.Label timer;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Button buttonCancel;
+        private System.Windows.Forms.Label label3;
     }
 }
 

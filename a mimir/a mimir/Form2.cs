@@ -31,7 +31,10 @@ namespace a_mimir
                 e.Handled = true; // Block the third colon
             }
         }
-
+        public string InputText
+        {
+            get { return textBox1.Text; }
+        }
         private void Form2_HelpButtonClicked(object sender, CancelEventArgs e)
         {
             MessageBox.Show("Puedes ingresar un valor numérico separado por ':' para delimitar horas, minutos y segundos.\n\n" +
@@ -40,6 +43,12 @@ namespace a_mimir
                 "-\"23:40\" iniciará el temporizador con un tiempo de 23 minutos y 40 segundos.\n" +
                 "-\"4433\" inicia el temporizador con un tiempo de 4433 segundos.\n" +
                 "Como muestra el último ejemplo, el temporizador ajusta automáticamente el tiempo ingresado, por lo que no hay que preocuparse por ingresar valores de los minutos o segundos mayores a 59.", "Ayuda");
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
+            this.Close();
         }
     }
 }

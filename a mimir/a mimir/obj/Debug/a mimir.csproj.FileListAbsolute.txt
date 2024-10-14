@@ -9,3 +9,14 @@ C:\Users\Dio\source\repos\a mimir\a mimir\obj\Debug\a mimir.csproj.CoreCompileIn
 C:\Users\Dio\source\repos\a mimir\a mimir\obj\Debug\a mimir.exe
 C:\Users\Dio\source\repos\a mimir\a mimir\obj\Debug\a mimir.pdb
 C:\Users\Dio\source\repos\a mimir\a mimir\obj\Debug\a_mimir.Form2.resources
+D:\Documents\GitHub\aMimir\a mimir\a mimir\bin\Debug\a mimir.exe.config
+D:\Documents\GitHub\aMimir\a mimir\a mimir\bin\Debug\a mimir.exe
+D:\Documents\GitHub\aMimir\a mimir\a mimir\bin\Debug\a mimir.pdb
+D:\Documents\GitHub\aMimir\a mimir\a mimir\obj\Debug\a mimir.csproj.AssemblyReference.cache
+D:\Documents\GitHub\aMimir\a mimir\a mimir\obj\Debug\a_mimir.Form1.resources
+D:\Documents\GitHub\aMimir\a mimir\a mimir\obj\Debug\a_mimir.Form2.resources
+D:\Documents\GitHub\aMimir\a mimir\a mimir\obj\Debug\a_mimir.Properties.Resources.resources
+D:\Documents\GitHub\aMimir\a mimir\a mimir\obj\Debug\a mimir.csproj.GenerateResource.cache
+D:\Documents\GitHub\aMimir\a mimir\a mimir\obj\Debug\a mimir.csproj.CoreCompileInputs.cache
+D:\Documents\GitHub\aMimir\a mimir\a mimir\obj\Debug\a mimir.exe
+D:\Documents\GitHub\aMimir\a mimir\a mimir\obj\Debug\a mimir.pdb

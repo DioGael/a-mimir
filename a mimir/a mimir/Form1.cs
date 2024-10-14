@@ -48,6 +48,67 @@ namespace a_mimir
 
             }
         }
+        public int ConvertToSeconds(string time)
+        {
+            // Split the time string into hours, minutes, and seconds
+            string[] parts = time.Split(':');
+            switch (parts.Length)
+            {
+                case 1:
+                    try
+                    {
+                        return int.Parse(time);
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Invalid format");
+                        return -1;
+                    }
+                case 2:
+                    try
+                    {
+                        return int.Parse(parts[0]) * 60 + int.Parse(parts[1]);
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Invalid format");
+                        return -1;
+                    }
+                case 3:
+                    try
+                    {
+                        return int.Parse(parts[0]) * 3600 + int.Parse(parts[1]) * 60 + int.Parse(parts[2]);
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Invalid format");
+                        return -1;
+                    }
+                case 4:
+                    try
+                    {
+                        return int.Parse(parts[0]) * 86400 + int.Parse(parts[1]) * 3600 + int.Parse(parts[2]) * 60 + int.Parse(parts[3]);
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Invalid format");
+                        return -1;
+                    }
+                default:
+                    MessageBox.Show("Invalid format");
+                    return -1;
+            }
+        }
+        public void startTimer ()
+        {
+            if (totalTimeInSeconds > 86399)
+                totalTimeInSeconds = 86399;
+            // Update the label with the initial time
+            timer.Text = TimeSpan.FromSeconds(totalTimeInSeconds).ToString(@"hh\:mm\:ss");
+
+            // Start the timer
+            countdownTimer.Start();
+        }
         private void ExecutePowerShellCommand(string command)
         {
             try
@@ -93,6 +154,7 @@ namespace a_mimir
             totalTimeInSeconds = 3600;
             ExecutePowerShellCommand("shutdown /s /t " + totalTimeInSeconds);
             InitializeTimer();
+            startTimer();
             
         }
 
@@ -101,6 +163,7 @@ namespace a_mimir
             totalTimeInSeconds = 7200;
             ExecutePowerShellCommand("shutdown /s /t " + totalTimeInSeconds);
             InitializeTimer();
+            startTimer();
         }
 
         private void button3hour_Click(object sender, EventArgs e)
@@ -108,12 +171,19 @@ namespace a_mimir
             totalTimeInSeconds = 10800;
             ExecutePowerShellCommand("shutdown /s /t " + totalTimeInSeconds);
             InitializeTimer();
+            startTimer();
         }
 
         private void buttonCustomTime_Click(object sender, EventArgs e)
         {
             Form2 form2 = new Form2();
-            form2.ShowDialog();
+            if (form2.ShowDialog() == DialogResult.OK)
+            {
+                totalTimeInSeconds = ConvertToSeconds(form2.InputText);
+                //ExecutePowerShellCommand("shutdown /s /t " + totalTimeInSeconds);
+                InitializeTimer();
+                startTimer();
+            }
             
         }
         private void timer_Click(object sender, EventArgs e)
