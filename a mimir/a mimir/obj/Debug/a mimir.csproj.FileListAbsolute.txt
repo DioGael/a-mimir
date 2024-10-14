@@ -1,0 +1,11 @@
+C:\Users\Dio\source\repos\a mimir\a mimir\bin\Debug\a mimir.exe.config
+C:\Users\Dio\source\repos\a mimir\a mimir\bin\Debug\a mimir.exe
+C:\Users\Dio\source\repos\a mimir\a mimir\bin\Debug\a mimir.pdb
+C:\Users\Dio\source\repos\a mimir\a mimir\obj\Debug\a mimir.csproj.AssemblyReference.cache
+C:\Users\Dio\source\repos\a mimir\a mimir\obj\Debug\a_mimir.Form1.resources
+C:\Users\Dio\source\repos\a mimir\a mimir\obj\Debug\a_mimir.Properties.Resources.resources
+C:\Users\Dio\source\repos\a mimir\a mimir\obj\Debug\a mimir.csproj.GenerateResource.cache
+C:\Users\Dio\source\repos\a mimir\a mimir\obj\Debug\a mimir.csproj.CoreCompileInputs.cache
+C:\Users\Dio\source\repos\a mimir\a mimir\obj\Debug\a mimir.exe
+C:\Users\Dio\source\repos\a mimir\a mimir\obj\Debug\a mimir.pdb
+C:\Users\Dio\source\repos\a mimir\a mimir\obj\Debug\a_mimir.Form2.resources
