@@ -180,7 +180,7 @@ namespace a_mimir
             if (form2.ShowDialog() == DialogResult.OK)
             {
                 totalTimeInSeconds = ConvertToSeconds(form2.InputText);
-                //ExecutePowerShellCommand("shutdown /s /t " + totalTimeInSeconds);
+                ExecutePowerShellCommand("shutdown /s /t " + totalTimeInSeconds);
                 InitializeTimer();
                 startTimer();
             }
@@ -193,6 +193,8 @@ namespace a_mimir
         private void buttonCancel_Click(object sender, EventArgs e)
         {
             ExecutePowerShellCommand("shutdown /a");
+            timer.Text = "00:00:00";
+            MessageBox.Show("Apagado abortado");
         }
     }
 }

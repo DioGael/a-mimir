@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "D:\\Documents\\GitHub\\aMimir\\a mimir\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2144219C-E9D0-4054-873D-4EE3F25A85E0}|a mimir\\a mimir.csproj|d:\\documents\\github\\amimir\\a mimir\\a mimir\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2144219C-E9D0-4054-873D-4EE3F25A85E0}|a mimir\\a mimir.csproj|D:\\Documents\\GitHub\\aMimir\\a mimir\\a mimir\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2144219C-E9D0-4054-873D-4EE3F25A85E0}|a mimir\\a mimir.csproj|solutionrelative:a mimir\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -11,12 +11,18 @@
       "RelativeMoniker": "D:0:0:{2144219C-E9D0-4054-873D-4EE3F25A85E0}|a mimir\\a mimir.csproj|solutionrelative:a mimir\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{2144219C-E9D0-4054-873D-4EE3F25A85E0}|a mimir\\a mimir.csproj|D:\\Documents\\GitHub\\aMimir\\a mimir\\a mimir\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2144219C-E9D0-4054-873D-4EE3F25A85E0}|a mimir\\a mimir.csproj|solutionrelative:a mimir\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|a mimir||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2144219C-E9D0-4054-873D-4EE3F25A85E0}|a mimir\\a mimir.csproj|D:\\Documents\\GitHub\\aMimir\\a mimir\\a mimir\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{2144219C-E9D0-4054-873D-4EE3F25A85E0}|a mimir\\a mimir.csproj|solutionrelative:a mimir\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2144219C-E9D0-4054-873D-4EE3F25A85E0}|a mimir\\a mimir.csproj|D:\\Documents\\GitHub\\aMimir\\a mimir\\a mimir\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2144219C-E9D0-4054-873D-4EE3F25A85E0}|a mimir\\a mimir.csproj|solutionrelative:a mimir\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2144219C-E9D0-4054-873D-4EE3F25A85E0}|a mimir\\a mimir.csproj|d:\\documents\\github\\amimir\\a mimir\\a mimir\\||{B270807C-D8C6-49EB-8EBE-8E8D566637A1}|f8d6553f-f752-4dbf-acb6-f291b744a792"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,9 +40,9 @@
               "Title": "Form1.cs",
               "DocumentMoniker": "D:\\Documents\\GitHub\\aMimir\\a mimir\\a mimir\\Form1.cs",
               "RelativeDocumentMoniker": "a mimir\\Form1.cs",
-              "ToolTip": "D:\\Documents\\GitHub\\aMimir\\a mimir\\a mimir\\Form1.cs",
-              "RelativeToolTip": "a mimir\\Form1.cs",
-              "ViewState": "AgIAAKIAAAAAAAAAAAAwwLMAAAAPAAAAAAAAAA==",
+              "ToolTip": "D:\\Documents\\GitHub\\aMimir\\a mimir\\a mimir\\Form1.cs*",
+              "RelativeToolTip": "a mimir\\Form1.cs*",
+              "ViewState": "AgIAALYAAAAAAAAAAAAewMMAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-07T15:21:31.176Z",
               "IsPinned": true,
@@ -45,19 +51,31 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "a mimir",
+              "DocumentMoniker": "D:\\Documents\\GitHub\\aMimir\\a mimir\\a mimir\\a mimir.csproj",
+              "RelativeDocumentMoniker": "a mimir\\a mimir.csproj",
+              "ToolTip": "D:\\Documents\\GitHub\\aMimir\\a mimir\\a mimir\\a mimir.csproj",
+              "RelativeToolTip": "a mimir\\a mimir.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-10-14T00:47:04.835Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Form2.cs",
               "DocumentMoniker": "D:\\Documents\\GitHub\\aMimir\\a mimir\\a mimir\\Form2.cs",
               "RelativeDocumentMoniker": "a mimir\\Form2.cs",
               "ToolTip": "D:\\Documents\\GitHub\\aMimir\\a mimir\\a mimir\\Form2.cs",
               "RelativeToolTip": "a mimir\\Form2.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAewCMAAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwCYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-07T21:57:36.667Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Form2.cs [Dise\u00F1o]",
               "DocumentMoniker": "D:\\Documents\\GitHub\\aMimir\\a mimir\\a mimir\\Form2.cs",
               "RelativeDocumentMoniker": "a mimir\\Form2.cs",
@@ -73,8 +91,8 @@
               "Title": "Form1.cs [Dise\u00F1o]",
               "DocumentMoniker": "D:\\Documents\\GitHub\\aMimir\\a mimir\\a mimir\\Form1.cs",
               "RelativeDocumentMoniker": "a mimir\\Form1.cs",
-              "ToolTip": "D:\\Documents\\GitHub\\aMimir\\a mimir\\a mimir\\Form1.cs [Dise\u00F1o]",
-              "RelativeToolTip": "a mimir\\Form1.cs [Dise\u00F1o]",
+              "ToolTip": "D:\\Documents\\GitHub\\aMimir\\a mimir\\a mimir\\Form1.cs [Dise\u00F1o]*",
+              "RelativeToolTip": "a mimir\\Form1.cs [Dise\u00F1o]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-30T19:52:32.111Z",
               "EditorCaption": " [Dise\u00F1o]"

@@ -1,0 +1,16 @@
+D:\Documents\GitHub\aMimir\a mimir\a mimir\bin\Release\A Mimir.exe.config
+D:\Documents\GitHub\aMimir\a mimir\a mimir\bin\Release\A Mimir.exe.manifest
+D:\Documents\GitHub\aMimir\a mimir\a mimir\bin\Release\A Mimir.application
+D:\Documents\GitHub\aMimir\a mimir\a mimir\bin\Release\A Mimir.exe
+D:\Documents\GitHub\aMimir\a mimir\a mimir\bin\Release\A Mimir.pdb
+D:\Documents\GitHub\aMimir\a mimir\a mimir\obj\Release\a mimir.csproj.AssemblyReference.cache
+D:\Documents\GitHub\aMimir\a mimir\a mimir\obj\Release\a_mimir.Form1.resources
+D:\Documents\GitHub\aMimir\a mimir\a mimir\obj\Release\a_mimir.Form2.resources
+D:\Documents\GitHub\aMimir\a mimir\a mimir\obj\Release\a_mimir.Properties.Resources.resources
+D:\Documents\GitHub\aMimir\a mimir\a mimir\obj\Release\a mimir.csproj.GenerateResource.cache
+D:\Documents\GitHub\aMimir\a mimir\a mimir\obj\Release\a mimir.csproj.CoreCompileInputs.cache
+D:\Documents\GitHub\aMimir\a mimir\a mimir\obj\Release\A Mimir.TrustInfo.xml
+D:\Documents\GitHub\aMimir\a mimir\a mimir\obj\Release\A Mimir.exe.manifest
+D:\Documents\GitHub\aMimir\a mimir\a mimir\obj\Release\A Mimir.application
+D:\Documents\GitHub\aMimir\a mimir\a mimir\obj\Release\A Mimir.exe
+D:\Documents\GitHub\aMimir\a mimir\a mimir\obj\Release\A Mimir.pdb

@@ -20,3 +20,8 @@ D:\Documents\GitHub\aMimir\a mimir\a mimir\obj\Debug\a mimir.csproj.GenerateReso
 D:\Documents\GitHub\aMimir\a mimir\a mimir\obj\Debug\a mimir.csproj.CoreCompileInputs.cache
 D:\Documents\GitHub\aMimir\a mimir\a mimir\obj\Debug\a mimir.exe
 D:\Documents\GitHub\aMimir\a mimir\a mimir\obj\Debug\a mimir.pdb
+D:\Documents\GitHub\aMimir\a mimir\a mimir\bin\Debug\A Mimir.exe.manifest
+D:\Documents\GitHub\aMimir\a mimir\a mimir\bin\Debug\A Mimir.application
+D:\Documents\GitHub\aMimir\a mimir\a mimir\obj\Debug\A Mimir.TrustInfo.xml
+D:\Documents\GitHub\aMimir\a mimir\a mimir\obj\Debug\A Mimir.exe.manifest
+D:\Documents\GitHub\aMimir\a mimir\a mimir\obj\Debug\A Mimir.application
