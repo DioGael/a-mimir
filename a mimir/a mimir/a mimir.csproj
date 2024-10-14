@@ -7,7 +7,7 @@
     <ProjectGuid>{2144219C-E9D0-4054-873D-4EE3F25A85E0}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>a_mimir</RootNamespace>
-    <AssemblyName>a mimir</AssemblyName>
+    <AssemblyName>A Mimir</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -31,6 +31,9 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>610119eb7555610004f918d9.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -87,6 +90,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="610119eb7555610004f918d9.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
