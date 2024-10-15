@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="A Mimir.exe" size="349096">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="A Mimir.exe" size="349608">
       <assemblyIdentity name="A Mimir" version="0.1.1.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>ZHCCX1IqoYGNn6W7baiqIaxWc386AQ0bGyS+3iJMcs8=</dsig:DigestValue>
+        <dsig:DigestValue>UNdHyLhwn7jAQiLfD5+y/w//prdN5Cpe94dRTPMlWLg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

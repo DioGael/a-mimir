@@ -16,7 +16,54 @@ namespace a_mimir
         bool flag = false;
         private Timer countdownTimer;
         private int totalTimeInSeconds;
-        
+        public Form1()
+        {
+            InitializeComponent();
+            InitializeTimer();
+            timer.Text = "Sepa cuánto";
+            /*if (checkShutdown())
+            {
+                label3.Text = "El ordenador se apagará en:";
+                timer.Text = "Sepa cuánto";
+                buttonCancel.Enabled = true;
+            }
+            else
+            {
+                label3.Text = "";
+                timer.Enabled = false;
+                buttonCancel.Enabled = false;
+
+            }*/
+        }
+        private bool checkShutdown()
+        {
+            ProcessStartInfo processStartInfo = new ProcessStartInfo
+            {
+                FileName = "powershell.exe",
+                Arguments = $"-Command \"shutdown /s /t 9999999\"", // Use -Command to execute the command
+                RedirectStandardOutput = true,
+                RedirectStandardError = true,
+                UseShellExecute = false,
+                CreateNoWindow = true // Hide the PowerShell window
+            };
+            using (Process process = new Process())
+            {
+                process.StartInfo = processStartInfo;
+                process.Start();
+                string error = process.StandardError.ReadToEnd();
+                process.WaitForExit();
+                // Display output or error
+                if (error != null && error != "")
+                {
+                    return true;
+                }
+                else
+                {
+                    ExecutePowerShellCommand("shutdown /a");
+                    return false;
+                }        
+            }
+        }
         private void InitializeTimer()
         {
             // Initialize the Timer
@@ -66,7 +113,7 @@ namespace a_mimir
                     }
                     catch (Exception)
                     {
-                        MessageBox.Show("Invalid format");
+                        MessageBox.Show("Formato inválido");
                         return -1;
                     }
                 case 2:
@@ -76,7 +123,7 @@ namespace a_mimir
                     }
                     catch (Exception)
                     {
-                        MessageBox.Show("Invalid format");
+                        MessageBox.Show("Formato inválido");
                         return -1;
                     }
                 case 3:
@@ -86,7 +133,7 @@ namespace a_mimir
                     }
                     catch (Exception)
                     {
-                        MessageBox.Show("Invalid format");
+                        MessageBox.Show("Formato inválido");
                         return -1;
                     }
                 case 4:
@@ -96,25 +143,22 @@ namespace a_mimir
                     }
                     catch (Exception)
                     {
-                        MessageBox.Show("Invalid format");
+                        MessageBox.Show("Formato inválido");
                         return -1;
                     }
                 default:
-                    MessageBox.Show("Invalid format");
+                    MessageBox.Show("Formato inválido");
                     return -1;
             }
         }
         public void startTimer ()
         {
-            if (totalTimeInSeconds > 86399)
-                totalTimeInSeconds = 86399;
             // Update the label with the initial time
             timer.Text = TimeSpan.FromSeconds(totalTimeInSeconds).ToString(@"hh\:mm\:ss");
-
             // Start the timer
             countdownTimer.Start();
         }
-        private void ExecutePowerShellCommand(string command)
+        private bool ExecutePowerShellCommand(string command)
         {
             try
             {
@@ -127,7 +171,6 @@ namespace a_mimir
                     UseShellExecute = false,
                     CreateNoWindow = true // Hide the PowerShell window
                 };
-
                 using (Process process = new Process())
                 {
                     process.StartInfo = processStartInfo;
@@ -136,18 +179,18 @@ namespace a_mimir
                     process.WaitForExit();
                     // Display output or error
                     if (error != null && error != "")
+                    {
                         MessageBox.Show(error, "Error");
+                        return false;
+                    }
+                    return true;
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"An error occurred: {ex.Message}");
+                return false;
             }
-        }
-        public Form1()
-        {
-            InitializeComponent();
-            InitializeTimer();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -165,23 +208,38 @@ namespace a_mimir
         private void button1hour_Click(object sender, EventArgs e)
         {
             totalTimeInSeconds = 3600;
-            ExecutePowerShellCommand("shutdown /s /t " + totalTimeInSeconds);
-            startTimer();
-            
+            if (ExecutePowerShellCommand("shutdown /s /t " + totalTimeInSeconds))
+            {
+                timer.Enabled = true;
+                buttonCancel.Enabled = true;
+                label3.Text = "El ordenador se apagará en:";
+                startTimer();
+            }
+
         }
 
         private void button2hour_Click(object sender, EventArgs e)
         {
             totalTimeInSeconds = 7200;
-            ExecutePowerShellCommand("shutdown /s /t " + totalTimeInSeconds);
-            startTimer();
+            if (ExecutePowerShellCommand("shutdown /s /t " + totalTimeInSeconds))
+            {
+                timer.Enabled = true;
+                buttonCancel.Enabled = true;
+                label3.Text = "El ordenador se apagará en:";
+                startTimer();
+            }
         }
 
         private void button3hour_Click(object sender, EventArgs e)
         {
             totalTimeInSeconds = 10800;
-            ExecutePowerShellCommand("shutdown /s /t " + totalTimeInSeconds);
-            startTimer();
+            if (ExecutePowerShellCommand("shutdown /s /t " + totalTimeInSeconds))
+            {
+                timer.Enabled = true;
+                buttonCancel.Enabled = true;
+                label3.Text = "El ordenador se apagará en:";
+                startTimer();
+            }
         }
 
         private void buttonCustomTime_Click(object sender, EventArgs e)
@@ -190,8 +248,15 @@ namespace a_mimir
             if (form2.ShowDialog() == DialogResult.OK)
             {
                 totalTimeInSeconds = ConvertToSeconds(form2.InputText);
-                ExecutePowerShellCommand("shutdown /s /t " + totalTimeInSeconds);
-                startTimer();
+                if (totalTimeInSeconds > 86399)
+                    totalTimeInSeconds = 86399;
+                if (ExecutePowerShellCommand("shutdown /s /t " + totalTimeInSeconds))
+                {
+                    timer.Enabled = true;
+                    buttonCancel.Enabled = true;
+                    label3.Text = "El ordenador se apagará en:";
+                    startTimer();
+                }
             }
             
         }
@@ -201,13 +266,14 @@ namespace a_mimir
         }
         private void buttonCancel_Click(object sender, EventArgs e)
         {
-            ExecutePowerShellCommand("shutdown /a");
-            totalTimeInSeconds = 0;
-            InitializeTimer();
-            timer.Text = "00:00:00";
-            MessageBox.Show("Apagado abortado");
+            if (ExecutePowerShellCommand("shutdown /a"))
+            {
+                totalTimeInSeconds = 0;
+                countdownTimer.Stop();
+                MessageBox.Show("Apagado abortado");
+            }
+            label3.Text = timer.Text = "";
         }
-
         private void label1_MouseMove(object sender, MouseEventArgs e)
         {
             toolTip1.SetToolTip(label1, "ᓚᘏᗢ");
